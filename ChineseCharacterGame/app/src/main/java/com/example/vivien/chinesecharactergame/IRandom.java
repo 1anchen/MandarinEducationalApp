@@ -1,10 +1,5 @@
 package com.example.vivien.chinesecharactergame;
 
-import java.util.Random;
-
-public class Game {
-
-
-
+public interface IRandom {
+    int spin();
 }
-
