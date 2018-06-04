@@ -9,34 +9,50 @@ import java.util.Random;
 // on the left side of the character
 
 
-public class PianPang implements IRandom{
+public class PianPang extends Wheel{
 
-    protected Integer id;
+    protected int id;
     protected int image;
     protected int symbol;
+    protected static int[] imageList;
 
 
-    public PianPang(Integer id, int image, int symbol){
+    public PianPang( int id, int image, int symbol){
         this.id= id;
         this.image = image;
         this.symbol = symbol;
+        this.imageList = new int[]{
+                                R.drawable.sandianshuileft, R.drawable.beizhileft,
+                                R.drawable.huozileft, R.drawable.jinzibianleft,
+                                R.drawable.muzhipiangleft};
     }
 
-    public int getIndex() {
-        return id;
+    public int getid() {
+        return this.id;
     }
 
     public int getImage() {
         return this.image;
     }
 
-    public int getComponent() {
-        return symbol;
+    public int getSymbol() {
+        return this.symbol;
     }
 
-    public void spin(int image){
-
+    public static int[] getImagelist() {
+        return imageList;
     }
+
+    public  void spin(){
+        currentIndex++;
+
+        if (currentIndex > imageList.length){
+            currentIndex = 0;
+        }
+    }
+
+
+
 
 
 }

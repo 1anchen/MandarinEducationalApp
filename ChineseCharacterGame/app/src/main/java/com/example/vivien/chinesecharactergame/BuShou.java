@@ -2,10 +2,8 @@ package com.example.vivien.chinesecharactergame;
 
 import java.util.Random;
 
-public class BuShou implements IRandom {
+public class BuShou {
 
-   public void spin(int image){
 
-   }
 
 }
