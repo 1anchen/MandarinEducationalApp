@@ -11,7 +11,7 @@ public class BuShouTest {
 
     @Before
     public void before() {
-        this.buShou = new BuShou(1, R.drawable.dingziright);
+        this.buShou = new BuShou(1, R.drawable.dingziright, new int[]{1,2,3,5});
     }
 
     @Test
@@ -34,6 +34,32 @@ public class BuShouTest {
     public void canGetCurrentIndex(){
         assertEquals(0, buShou.getCurrentIndex());
     }
+
+    @Test
+    public void canGetPianPangList(){
+        assertEquals(4, buShou.getPainPangList().length);
+    }
+
+    @Test
+    public void canGetPianPangListFristIndex(){
+        assertEquals(1, buShou.getPainPangList()[0]);
+    }
+
+    @Test
+    public void canGetPianPangListSecondIndex(){
+        assertEquals(2, buShou.getPainPangList()[1]);
+    }
+
+    @Test
+    public void canGetPianPangListThirdIndex(){
+        assertEquals(3, buShou.getPainPangList()[2]);
+    }
+
+    @Test
+    public void canGetPianPangListForthIndex(){
+        assertEquals(5, buShou.getPainPangList()[3]);
+    }
+
 
 
 }

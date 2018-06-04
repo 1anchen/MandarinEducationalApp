@@ -7,13 +7,12 @@ public abstract class Wheel extends Thread{
             void newImage(int image);
         }
 
-    private static int[] imagesList;
-    protected int currentIndex;
-    protected ISpin iSpin;
-    protected long flashingTime;
-    protected long startTime;
-
-    protected boolean isStarted;
+        protected static int[] imagesList;
+        protected int currentIndex;
+        protected ISpin iSpin;
+        protected long flashingTime;
+        protected long startTime;
+        protected boolean isStarted;
 
     public Wheel() {
         this.flashingTime = 0;

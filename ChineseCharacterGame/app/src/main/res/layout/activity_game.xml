@@ -20,7 +20,7 @@
         app:layout_constraintEnd_toStartOf="@+id/bottom_right"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/beizhi" />
+        app:srcCompat="@drawable/beizhileft" />
 
     <ImageView
         android:id="@+id/top_left"

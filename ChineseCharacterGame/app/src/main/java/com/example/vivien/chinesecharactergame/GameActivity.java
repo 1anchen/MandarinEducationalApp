@@ -1,29 +1,30 @@
-//package com.example.vivien.chinesecharactergame;
-//
-//import android.support.constraint.ConstraintLayout;
-//import android.support.v7.app.AppCompatActivity;
-//import android.os.Bundle;
-//import android.view.View;
-//import android.widget.Button;
-//import android.widget.ImageView;
-//import android.widget.TextView;
-//
-//import java.util.Random;
-//
-//public class GameActivity extends AppCompatActivity {
-//
-//    private TextView topRight, field ;
-//    private ImageView topLeft, bottonLeft, bottonRight;
-//    private PianPang pianPang;
-//    private BuShou buShou;
-//    private ConstraintLayout gamefield;
-//    private boolean isStarted;
-//
-////    public static final Random RANDOM = new Random();
-//
-////    public static long randomLong(long lower, long upper) {
-////        return lower + (long) (RANDOM.nextDouble() * (upper - lower));
-////    }
+package com.example.vivien.chinesecharactergame;
+
+import android.support.constraint.ConstraintLayout;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.Random;
+
+public class GameActivity extends AppCompatActivity {
+
+    private TextView topRight, field;
+    private ImageView topLeft, bottonLeft, bottonRight;
+    private PianPang pianPang;
+    private BuShou buShou;
+    private ConstraintLayout gamefield;
+    private boolean isStarted;
+}
+
+//    public static final Random RANDOM = new Random();
+
+//    public static long randomLong(long lower, long upper) {
+//        return lower + (long) (RANDOM.nextDouble() * (upper - lower));
+//    }
 //
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
