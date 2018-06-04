@@ -1,8 +1,5 @@
 package com.example.vivien.chinesecharactergame;
 
-import android.content.Intent;
-
-import java.util.Random;
 
 // PianPang is the indexing component which
 // form a Chinese character normal appears
@@ -43,16 +40,13 @@ public class PianPang extends Wheel{
         return imageList;
     }
 
-    public  void spin(){
+    public void spin(){
         currentIndex++;
 
         if (currentIndex > imageList.length){
             currentIndex = 0;
         }
     }
-
-
-
 
 
 }

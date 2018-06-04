@@ -80,6 +80,12 @@ public class PianPangTest {
         assertEquals(0, pianPang.getCurrentIndex());
     }
 
+    @Test
+    public void canStopWheel(){
+        pianPang.stopWheel();
+        assertEquals(false,pianPang.getIsStarted());
+    }
+
 
 
 
