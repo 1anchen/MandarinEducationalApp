@@ -14,10 +14,7 @@ public class GameTest {
         this.game = new Game();
     }
 
-    @Test
-    public void canReturnRandomNumber(){
-        assertEquals(1, game.spin());
-    }
+
 
 
 }
