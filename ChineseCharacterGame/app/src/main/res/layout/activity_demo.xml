@@ -2,8 +2,80 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/deom_field"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DemoActivity">
+
+    <ImageView
+        android:id="@+id/left"
+        android:layout_width="175dp"
+        android:layout_height="323dp"
+        android:layout_marginBottom="52dp"
+        android:onClick="onClickListener"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_zone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/beizhileft" />
+
+    <ImageView
+        android:id="@+id/right"
+        android:layout_width="197dp"
+        android:layout_height="323dp"
+        android:layout_marginBottom="52dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="onClickListener"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_zone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/shell" />
+
+    <LinearLayout
+        android:id="@+id/bottom_zone"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/maingame"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center"
+            android:onClick="onClickToNextPage"
+            android:text="Go To Main Game" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/demo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Demo"
+        android:textSize="36sp"
+        app:fontFamily="@font/aclonica"
+        app:layout_constraintBottom_toTopOf="@+id/right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>

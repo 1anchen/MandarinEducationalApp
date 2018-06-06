@@ -3,15 +3,21 @@ package com.example.vivien.chinesecharactergame;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Random;
+
 import static org.junit.Assert.assertEquals;
 
 public class PianPangTest {
     PianPang pianPang;
+    int number;
+    Random random;
 
     @Before
     public void before() {
 
-        this.pianPang = new PianPang( 1, R.drawable.dingziright, R.drawable.huozileft);
+        this.pianPang = new PianPang(1, R.drawable.sandianshuileft, R.drawable.water, "WaterSign");
+        this.random = new Random();
+        this.number = random.nextInt(5);
 
     }
 
@@ -85,6 +91,41 @@ public class PianPangTest {
         pianPang.stopWheel();
         assertEquals(false,pianPang.getIsStarted());
     }
+
+
+    @Test
+    public void canReturnRandomImageIndexZero(){
+        assertEquals(R.drawable.sandianshuileft,pianPang.randomImage(0));
+    }
+
+    @Test
+    public void canReturnRandomImageIndexOne(){
+        assertEquals(R.drawable.beizhileft,pianPang.randomImage(1));
+    }
+
+    @Test
+    public void canReturnRandomImageIndexTwo(){
+        assertEquals(R.drawable.huozileft,pianPang.randomImage(2));
+    }
+
+    @Test
+    public void canReturnRandomImageIndexThree(){
+        assertEquals(R.drawable.jinzibianleft,pianPang.randomImage(3));
+    }
+
+    @Test
+    public void canReturnRandomImageIndexFive(){
+        assertEquals(R.drawable.muzhipiangleft,pianPang.randomImage(4));
+    }
+
+    @Test
+    public void canGetPianPangName(){
+        assertEquals("WaterSign", pianPang.getPianPangName());
+    }
+
+
+
+
 
 
 

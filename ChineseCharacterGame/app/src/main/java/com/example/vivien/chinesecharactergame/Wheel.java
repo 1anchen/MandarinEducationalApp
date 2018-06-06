@@ -1,15 +1,9 @@
 package com.example.vivien.chinesecharactergame;
 
-public abstract class Wheel extends Thread{
-
-        interface ISpin {
-
-            void newImage(int image);
-        }
+public class Wheel extends Thread {
 
         protected static int[] imagesList;
         protected int currentIndex;
-        protected ISpin iSpin;
         protected long flashingTime;
         protected long startTime;
         protected boolean isStarted;
@@ -19,6 +13,7 @@ public abstract class Wheel extends Thread{
         this.startTime = 500;
         this.currentIndex = 0;
         this.isStarted = true;
+
     }
 
     public int getCurrentIndex() {
@@ -37,27 +32,17 @@ public abstract class Wheel extends Thread{
         return isStarted;
     }
 
-    public abstract void spin();
+    public void spin(){
+
+    }
+
+   public void newImage(int image){
+
+   }
 
     @Override
-    public void run() {
-        try {
-            Thread.sleep(startTime);
-        } catch (InterruptedException e) {
-        }
+    public void run(){
 
-        while(isStarted) {
-            try {
-                Thread.sleep(flashingTime);
-            } catch (InterruptedException e) {
-            }
-
-            spin();
-
-            if (iSpin != null) {
-                iSpin.newImage(imagesList[currentIndex]);
-            }
-        }
     }
 
     public void stopWheel() {

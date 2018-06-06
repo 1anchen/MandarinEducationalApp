@@ -11,7 +11,7 @@ public class BuShouTest {
 
     @Before
     public void before() {
-        this.buShou = new BuShou(1, R.drawable.dingziright, new int[]{1,2,3,5});
+        this.buShou = new BuShou(1, R.drawable.dingziright, "Adult Male Over 18",new int[]{1,2,3,5});
     }
 
     @Test
@@ -38,6 +38,11 @@ public class BuShouTest {
     @Test
     public void canGetPianPangList(){
         assertEquals(4, buShou.getPainPangList().length);
+    }
+
+    @Test
+    public void canGetInformation(){
+        assertEquals("Adult Male Over 18", buShou.getInformation());
     }
 
     @Test

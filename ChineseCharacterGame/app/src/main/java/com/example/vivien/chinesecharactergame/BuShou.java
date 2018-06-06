@@ -15,13 +15,14 @@ public class BuShou extends Wheel {
     protected int symbol;
     protected static int[] imageList;
     protected int[] painPangList;
+    protected String information;
 
 
-    public BuShou(int id, int image, int[] pianPangList){
+    public BuShou(int id, int image, String information,int[] pianPangList){
         this.id = id;
         this.image = image;
-        this.imageList = new int[]{
-                R.drawable.dingziright, R.drawable.cairight};
+        this.information = information;
+        this.imageList = new int[]{R.drawable.dingziright, R.drawable.cairight};
         this.painPangList = pianPangList;
 
     }
@@ -34,6 +35,9 @@ public class BuShou extends Wheel {
         return this.image;
     }
 
+    public String getInformation() {
+        return this.information;
+    }
 
     public static int[] getImagelist() {
         return imageList;
