@@ -11,7 +11,7 @@ public class ZiTest {
     Zi light;
     Zi nail;
     Zi timber;
-    Zi shallowland;
+    Zi wealth;
     Zi shallowland;
 
     Game game;
@@ -36,8 +36,8 @@ public class ZiTest {
                 R.drawable.nail);
         this.timber = new Zi(5,"Pronounce : Cai || Definition :  Timber, Wooden Material ",
                 R.drawable.timber);
-        this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
-                R.drawable.stick);
+        this.wealth = new Zi(6,"Pronounce : Cai || Definition :  Wealth, Property, Valuables ",
+                R.drawable.wealth);
         this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
                 R.drawable.stick);
         this.game = new Game();
