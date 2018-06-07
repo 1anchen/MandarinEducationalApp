@@ -10,12 +10,14 @@ public class Zi {
     protected int[] pianPandIdList;
     protected int[] buShouIdList;
 
+
     public Zi(int id, int pianPangId, int buShouId, String definition, int image){
         this.id = id;
         this.pianPangId = pianPangId;
         this.buShouId = buShouId;
         this.image = image;
         this.definition = definition;
+
         this.pianPandIdList = new int[]{1,2,3,4,5};
         this.buShouIdList = new int[]{1,2};
 
@@ -56,6 +58,8 @@ public class Zi {
     public void setDefinition(String definition) {
         this.definition = definition;
     }
+
+
 
 
 

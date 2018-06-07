@@ -30,6 +30,13 @@ public class GameActivity extends AppCompatActivity {
     private Random random;
     private int number1;
     private int number2;
+    private Zi shallowland;
+    private Zi stick;
+    private Zi light;
+    private Zi nail;
+    private Zi timber;
+    private Zi wealth;
+    private Zi wrong;
 
 
 
@@ -52,6 +59,20 @@ public class GameActivity extends AppCompatActivity {
         this.game = new Game();
         this.adultMaleSign = new BuShou(1, R.drawable.dingziright, "Adult Male Over 18",new int[]{1,2,3,5});
         this.abilitySign = new BuShou(2, R.drawable.cairight,"Ability", new int[]{2,4});
+        this.shallowland = new Zi(1,1,1,"Pronounce : Ting || Definition :  a shallow land near a river ",
+                R.drawable.shallowLand);
+        this.stick = new Zi(2,2,1,"Pronounce : Cheng || Definition :  Strike, Hit against ",
+                R.drawable.stick);
+        this.light = new Zi(3,3,1,"Pronounce : Deng || Definition :  Light ",
+                R.drawable.light);
+        this.nail = new Zi(4,5,1,"Pronounce : Ding || Definition :  Nail ",
+                R.drawable.nail);
+        this.timber = new Zi(5,2,2,"Pronounce : Cai || Definition :  Timber, Wooden Material ",
+                R.drawable.timber);
+        this.wealth = new Zi(6,4,2,"Pronounce : Cai || Definition :  Wealth, Property, Valuables ",
+                R.drawable.wealth);
+        this.wrong = new Zi(7,0,0,"Sorry This Word Doesn't Exit, You Can Call It Whatever You Want ",
+                R.drawable.wrong);
 
 //        gameField.setOnClickListener(new View.OnClickListener() {
 //        @Override

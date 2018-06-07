@@ -8,6 +8,7 @@ public class Game {
     protected int number;
     protected PianPang[] pianPanglist;
     protected BuShou[] buShoulist;
+    protected Zi[] zilist;
     protected boolean isStarted;
 
    public Game() {
@@ -23,6 +24,22 @@ public class Game {
        buShoulist = new BuShou[]{
                new BuShou(1, R.drawable.dingziright,"Adult Male Over 18", new int[]{1,2,3,5}),
                new BuShou(2, R.drawable.cairight,"Ability", new int[]{2,4})
+       };
+       zilist = new Zi[]{
+               new Zi(1,1,1,"Pronounce : Ting || Definition :  a shallow land near a river ",
+                       R.drawable.shallowLand),
+               new Zi(2,2,1,"Pronounce : Cheng || Definition :  Strike, Hit against ",
+               R.drawable.stick),
+               new Zi(3,3,1,"Pronounce : Deng || Definition :  Light ",
+               R.drawable.light),
+               new Zi(4,5,1,"Pronounce : Ding || Definition :  Nail ",
+               R.drawable.nail),
+               new Zi(5,2,2,"Pronounce : Cai || Definition :  Timber, Wooden Material ",
+               R.drawable.timber),
+               new Zi(6,4,2,"Pronounce : Cai || Definition :  Wealth, Property, Valuables ",
+               R.drawable.wealth),
+               new Zi(7,0,0,"Sorry This Word Doesn't Exit, You Can Call It Whatever You Want ",
+               R.drawable.wrong)
        };
        this.isStarted = true;
    }
@@ -131,6 +148,21 @@ public class Game {
         }
         return buShou;
 
+    }
+
+    public Zi findTheRightZi(){
+        Zi newZi = new Zi(0,0,0,"",0);
+        for(int i=0; i<5; i++ ){
+
+            for (int j=0; j<2; j++){
+                if(){
+
+                }
+            }
+
+        }
+
+        return newZi;
     }
 }
 
