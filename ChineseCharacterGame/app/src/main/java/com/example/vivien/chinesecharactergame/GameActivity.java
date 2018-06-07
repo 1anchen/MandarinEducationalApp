@@ -12,8 +12,8 @@ import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
 
-    private TextView topRight, field;
-    private ImageView topLeft, bottonLeft, bottonRight;
+    private TextView  field;
+    private ImageView topLeft, bottonLeft, bottonRight,topRight;
     private Game game;
     private PianPang waterSign;
     private PianPang woodSign;
@@ -35,6 +35,8 @@ public class GameActivity extends AppCompatActivity {
     private Zi timber;
     private Zi wealth;
     private Zi wrong;
+    private Zi newZi;
+
 
 
 
@@ -71,6 +73,7 @@ public class GameActivity extends AppCompatActivity {
                 R.drawable.wealth);
         this.wrong = new Zi(7,0,0,"Sorry This Word Doesn't Exit, You Can Call It Whatever You Want ",
                 R.drawable.wrong);
+        this.newZi = new Zi(0,0,0,"",0);
 
 //        gameField.setOnClickListener(new View.OnClickListener() {
 //        @Override
@@ -90,9 +93,12 @@ public class GameActivity extends AppCompatActivity {
             bottonLeft.setImageResource(game.getPianPangIamgeByID(number1));
             topLeft.setImageResource(game.getPianPangSymbolByID(number1));
             bottonRight.setImageResource(game.getBuShouIamgeByID(number2));
-            topRight.setText(game.getBuShouInformationByID(number2));
+            topRight.setImageResource(game.getBuShouInformationByID(number2));
 
             if (game.match(game.getPianPangByID(number1),game.getBuShouByID(number2))){
+
+                newZi = game.findTheRightZi(game.getPianPangByID(number1),game.getBuShouByID(number2));
+
 
             }
 

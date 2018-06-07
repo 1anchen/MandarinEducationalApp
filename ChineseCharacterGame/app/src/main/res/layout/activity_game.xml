@@ -12,41 +12,45 @@
         android:id="@+id/botton_left"
         android:layout_width="137dp"
         android:layout_height="269dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginStart="48dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/field"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zi_image"
         app:srcCompat="@drawable/beizhileft" />
 
     <ImageView
         android:id="@+id/top_left"
-        android:layout_width="125dp"
-        android:layout_height="97dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginStart="56dp"
+        android:layout_width="92dp"
+        android:layout_height="73dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/botton_left"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.421"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/gold" />
 
     <ImageView
         android:id="@+id/bottom_right"
         android:layout_width="141dp"
         android:layout_height="268dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginRight="72dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintBottom_toTopOf="@+id/field"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/botton_left"
         app:srcCompat="@drawable/cairight" />
 
     <TextView
         android:id="@+id/field"
-        android:layout_width="303dp"
-        android:layout_height="87dp"
+        android:layout_width="307dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="40dp"
@@ -58,22 +62,33 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
+    <ImageView
+        android:id="@+id/zi_image"
+        android:layout_width="198dp"
+        android:layout_height="132dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_right"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/colorBackgroundFloating"
+        tools:layout_editor_absoluteX="101dp" />
+
+    <ImageView
         android:id="@+id/top_right"
-        android:layout_width="125dp"
-        android:layout_height="93dp"
+        android:layout_width="69dp"
+        android:layout_height="56dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_right"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
-        app:layout_constraintStart_toEndOf="@+id/top_left"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/zi_image"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="?attr/colorBackgroundFloating" />
 
 </android.support.constraint.ConstraintLayout>
