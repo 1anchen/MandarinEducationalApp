@@ -9,8 +9,8 @@ public class ZiTest {
     Zi shallowland;
     Zi stick;
     Zi light;
-    Zi shallowland;
-    Zi shallowland;
+    Zi nail;
+    Zi timber;
     Zi shallowland;
     Zi shallowland;
 
@@ -26,13 +26,13 @@ public class ZiTest {
 
     @Before
     public void before() {
-        this.shallowland = new Zi(1,"Pronounce : Ting || Definition :  a shallow land near a river",
+        this.shallowland = new Zi(1,"Pronounce : Ting || Definition :  a shallow land near a river ",
                 R.drawable.shallowLand);
         this.stick = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
                 R.drawable.stick);
-        this.light = new Zi(3,"Pronounce : Deng || Definition :  Light",
+        this.light = new Zi(3,"Pronounce : Deng || Definition :  Light ",
                 R.drawable.light);
-        this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
+        this.nail = new Zi(4,"Pronounce : Ding || Definition :  Nail ",
                 R.drawable.stick);
         this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
                 R.drawable.stick);
