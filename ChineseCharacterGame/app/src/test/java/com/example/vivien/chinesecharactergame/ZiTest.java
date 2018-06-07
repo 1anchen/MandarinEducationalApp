@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class ZiTest {
     Zi shallowland;
     Zi stick;
-    Zi shallowland;
+    Zi light;
     Zi shallowland;
     Zi shallowland;
     Zi shallowland;
@@ -28,10 +28,10 @@ public class ZiTest {
     public void before() {
         this.shallowland = new Zi(1,"Pronounce : Ting || Definition :  a shallow land near a river",
                 R.drawable.shallowLand);
-        this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
+        this.stick = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
                 R.drawable.stick);
-        this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
-                R.drawable.stick);
+        this.light = new Zi(3,"Pronounce : Deng || Definition :  Light",
+                R.drawable.light);
         this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
                 R.drawable.stick);
         this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
