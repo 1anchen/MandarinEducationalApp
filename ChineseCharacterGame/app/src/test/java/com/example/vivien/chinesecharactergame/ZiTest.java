@@ -12,7 +12,7 @@ public class ZiTest {
     Zi nail;
     Zi timber;
     Zi wealth;
-    Zi shallowland;
+    Zi wrong;
 
     Game game;
     PianPang waterSign;
@@ -38,8 +38,8 @@ public class ZiTest {
                 R.drawable.timber);
         this.wealth = new Zi(6,"Pronounce : Cai || Definition :  Wealth, Property, Valuables ",
                 R.drawable.wealth);
-        this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
-                R.drawable.stick);
+        this.wrong = new Zi(7,"Sorry This Word Doesn't Exit, You Can Call It Whatever You Want ",
+                R.drawable.wrong);
         this.game = new Game();
         this.waterSign = new PianPang(1, R.drawable.sandianshuileft, R.drawable.water, "WaterSign");
         this.woodSign = new PianPang( 2, R.drawable.muzhipiangleft, R.drawable.wood,"WoodSign");
