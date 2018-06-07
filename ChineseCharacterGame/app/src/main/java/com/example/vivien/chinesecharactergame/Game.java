@@ -27,7 +27,7 @@ public class Game {
        };
        zilist = new Zi[]{
                new Zi(1,1,1,"Pronounce : Ting || Definition :  a shallow land near a river ",
-                       R.drawable.shallowLand),
+                       R.drawable.shallowland),
                new Zi(2,2,1,"Pronounce : Cheng || Definition :  Strike, Hit against ",
                R.drawable.stick),
                new Zi(3,3,1,"Pronounce : Deng || Definition :  Light ",
@@ -150,17 +150,15 @@ public class Game {
 
     }
 
-    public Zi findTheRightZi(){
-        Zi newZi = new Zi(0,0,0,"",0);
-        for(int i=0; i<zilist.length; i++ ){
+    public Zi findTheRightZi(PianPang pianPang,BuShou buShou) {
 
-                if(){
+        for (int i = 0; i < zilist.length; i++) {
 
-                }
-
+            if ((zilist[i].getPianPangId() == pianPang.getid()) && (zilist[i].getBuShouId() == buShou.getid())) {
+                return zilist[i];
+            }
         }
-
-        return newZi;
+        return zilist[6];
     }
 }
 

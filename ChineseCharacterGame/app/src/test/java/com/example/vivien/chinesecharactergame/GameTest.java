@@ -15,6 +15,13 @@ public class GameTest {
     PianPang goldSign;
     BuShou adultMaleSign;
     BuShou abilitySign;
+    Zi shallowland;
+    Zi stick;
+    Zi light;
+    Zi nail;
+    Zi timber;
+    Zi wealth;
+    Zi wrong;
 
 
     @Before
@@ -28,7 +35,20 @@ public class GameTest {
         this.goldSign = new PianPang( 5, R.drawable.jinzibianleft, R.drawable.gold,"GoldSign");
         this.adultMaleSign = new BuShou(1, R.drawable.dingziright,"Adult Male Over 18", new int[]{1,2,3,5});
         this.abilitySign = new BuShou(2, R.drawable.cairight, "Ability",new int[]{2,4});
-
+        this.shallowland = new Zi(1,1,1,"Pronounce : Ting || Definition :  a shallow land near a river ",
+                R.drawable.shallowland);
+        this.stick = new Zi(2,2,1,"Pronounce : Cheng || Definition :  Strike, Hit against ",
+                R.drawable.stick);
+        this.light = new Zi(3,3,1,"Pronounce : Deng || Definition :  Light ",
+                R.drawable.light);
+        this.nail = new Zi(4,5,1,"Pronounce : Ding || Definition :  Nail ",
+                R.drawable.nail);
+        this.timber = new Zi(5,2,2,"Pronounce : Cai || Definition :  Timber, Wooden Material ",
+                R.drawable.timber);
+        this.wealth = new Zi(6,4,2,"Pronounce : Cai || Definition :  Wealth, Property, Valuables ",
+                R.drawable.wealth);
+        this.wrong = new Zi(7,0,0,"Sorry This Word Doesn't Exit, You Can Call It Whatever You Want ",
+                R.drawable.wrong);
     }
 
     @Test
@@ -185,6 +205,54 @@ public class GameTest {
     @Test
     public void canGetBuShouByIDOne(){
         assertEquals(abilitySign.information, game.getBuShouByID(1).getInformation());
+    }
+
+    @Test
+    public void canFindTheRightZiShallowland(){
+        assertEquals(shallowland.getDefinition(),game.findTheRightZi(waterSign,adultMaleSign).getDefinition());
+    }
+
+    @Test
+    public void canFindTheRightZiStick(){
+        assertEquals(stick.getDefinition(),game.findTheRightZi(woodSign,adultMaleSign).getDefinition());
+    }
+
+    @Test
+    public void canFindTheRightZiLight(){
+        assertEquals(light.getDefinition(),game.findTheRightZi(fireSign,adultMaleSign).getDefinition());
+    }
+
+    @Test
+    public void canFindTheRightZiWrongOne(){
+        assertEquals(wrong.getDefinition(),game.findTheRightZi(shellSign,adultMaleSign).getDefinition());
+    }
+
+    @Test
+    public void canFindTheRightZiNail(){
+        assertEquals(nail.getDefinition(),game.findTheRightZi(goldSign,adultMaleSign).getDefinition());
+    }
+
+    @Test
+    public void canFindTheRightZiWrongTwo(){
+        assertEquals(wrong.getDefinition(),game.findTheRightZi(waterSign,abilitySign).getDefinition());
+    }
+
+    @Test
+    public void canFindTheRightZiTimber(){
+        assertEquals(timber.getDefinition(),game.findTheRightZi(woodSign,abilitySign).getDefinition());
+    }
+
+    @Test
+    public void canFindTheRightZiWrongThree(){
+        assertEquals(wrong.getDefinition(),game.findTheRightZi(fireSign,abilitySign).getDefinition());
+    }
+    @Test
+    public void canFindTheRightZiWealth(){
+        assertEquals(wealth.getDefinition(),game.findTheRightZi(shellSign,abilitySign).getDefinition());
+    }
+    @Test
+    public void canFindTheRightZiWrongFour(){
+        assertEquals(wrong.getDefinition(),game.findTheRightZi(goldSign,abilitySign).getDefinition());
     }
 
 

@@ -27,7 +27,7 @@ public class ZiTest {
     @Before
     public void before() {
         this.shallowland = new Zi(1,1,1,"Pronounce : Ting || Definition :  a shallow land near a river ",
-                R.drawable.shallowLand);
+                R.drawable.shallowland);
         this.stick = new Zi(2,2,1,"Pronounce : Cheng || Definition :  Strike, Hit against ",
                 R.drawable.stick);
         this.light = new Zi(3,3,1,"Pronounce : Deng || Definition :  Light ",

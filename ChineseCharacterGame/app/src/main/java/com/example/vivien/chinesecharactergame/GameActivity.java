@@ -4,8 +4,6 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -60,7 +58,7 @@ public class GameActivity extends AppCompatActivity {
         this.adultMaleSign = new BuShou(1, R.drawable.dingziright, "Adult Male Over 18",new int[]{1,2,3,5});
         this.abilitySign = new BuShou(2, R.drawable.cairight,"Ability", new int[]{2,4});
         this.shallowland = new Zi(1,1,1,"Pronounce : Ting || Definition :  a shallow land near a river ",
-                R.drawable.shallowLand);
+                R.drawable.shallowland);
         this.stick = new Zi(2,2,1,"Pronounce : Cheng || Definition :  Strike, Hit against ",
                 R.drawable.stick);
         this.light = new Zi(3,3,1,"Pronounce : Deng || Definition :  Light ",
