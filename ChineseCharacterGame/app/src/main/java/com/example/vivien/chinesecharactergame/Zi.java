@@ -1,5 +1,8 @@
 package com.example.vivien.chinesecharactergame;
 
+import android.content.Context;
+import android.media.MediaPlayer;
+
 public class Zi {
 
     private int id;
@@ -9,15 +12,20 @@ public class Zi {
     protected String definition;
     protected int[] pianPandIdList;
     protected int[] buShouIdList;
+//    public Context context;
+    protected MediaPlayer mediaPlayer;
 
+//    public void audio(Context context){
+//        this.context = context;
+//    }
 
-    public Zi(int id, int pianPangId, int buShouId, String definition, int image){
+    public Zi(int id, int pianPangId, int buShouId, String definition, int image, int sound){
         this.id = id;
         this.pianPangId = pianPangId;
         this.buShouId = buShouId;
         this.image = image;
         this.definition = definition;
-
+//        this.mediaPlayer = MediaPlayer.create(context,sound);
         this.pianPandIdList = new int[]{1,2,3,4,5};
         this.buShouIdList = new int[]{1,2};
 
@@ -59,8 +67,7 @@ public class Zi {
         this.definition = definition;
     }
 
-
-
-
-
+    public MediaPlayer getMediaPlayer() {
+        return mediaPlayer;
+    }
 }

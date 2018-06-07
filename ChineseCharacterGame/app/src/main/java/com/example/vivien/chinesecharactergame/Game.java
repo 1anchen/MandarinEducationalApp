@@ -22,24 +22,25 @@ public class Game {
                new PianPang(5, R.drawable.jinzibianleft, R.drawable.gold, "GoldSign")
        };
        buShoulist = new BuShou[]{
-               new BuShou(1, R.drawable.dingziright,"Adult Male Over 18", new int[]{1,2,3,5}),
-               new BuShou(2, R.drawable.cairight,"Ability", new int[]{2,4})
+               new BuShou(1, R.drawable.dingziright,R.drawable.adultmale,"Adult Male Over 18", new int[]{1,2,3,5}),
+               new BuShou(2, R.drawable.cairight,R.drawable.ability,"Ability", new int[]{2,4})
        };
+//
        zilist = new Zi[]{
                new Zi(1,1,1,"Pronounce : Ting || Definition :  a shallow land near a river ",
-                       R.drawable.shallowland),
+                       R.drawable.shallowland, R.raw.pting),
                new Zi(2,2,1,"Pronounce : Cheng || Definition :  Strike, Hit against ",
-               R.drawable.stick),
+               R.drawable.stick, R.raw.pcheng),
                new Zi(3,3,1,"Pronounce : Deng || Definition :  Light ",
-               R.drawable.light),
+               R.drawable.light, R.raw.pdeng),
                new Zi(4,5,1,"Pronounce : Ding || Definition :  Nail ",
-               R.drawable.nail),
+               R.drawable.nail, R.raw.pding),
                new Zi(5,2,2,"Pronounce : Cai || Definition :  Timber, Wooden Material ",
-               R.drawable.timber),
+               R.drawable.timber,R.raw.pcai),
                new Zi(6,4,2,"Pronounce : Cai || Definition :  Wealth, Property, Valuables ",
-               R.drawable.wealth),
+               R.drawable.wealth,R.raw.pcai),
                new Zi(7,0,0,"Sorry This Word Doesn't Exit, You Can Call It Whatever You Want ",
-               R.drawable.wrong)
+               R.drawable.wrong,R.raw.bleat)
        };
        this.isStarted = true;
    }
@@ -66,6 +67,18 @@ public class Game {
         for(int i=0; i<pianPanglist.length; i++) {
             if(pianPanglist[i].getid()==index){
                 image = pianPanglist[i].getSymbol();
+            }
+        }
+        return image;
+
+    }
+
+    public int getBuShouSymbolByID(int index){
+        int image = 0;
+        index++;
+        for(int i=0; i<buShoulist.length; i++) {
+            if(buShoulist[i].getid()==index){
+                image = buShoulist[i].getSymbol();
             }
         }
         return image;

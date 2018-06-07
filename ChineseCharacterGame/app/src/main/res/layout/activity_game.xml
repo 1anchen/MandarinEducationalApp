@@ -8,87 +8,92 @@
     android:onClick="onClick"
     tools:context=".GameActivity">
 
-    <ImageView
-        android:id="@+id/botton_left"
-        android:layout_width="137dp"
-        android:layout_height="269dp"
-        android:layout_marginBottom="12dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/field"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/zi_image"
-        app:srcCompat="@drawable/beizhileft" />
-
-    <ImageView
-        android:id="@+id/top_left"
-        android:layout_width="92dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/botton_left"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/gold" />
-
-    <ImageView
-        android:id="@+id/bottom_right"
-        android:layout_width="141dp"
-        android:layout_height="268dp"
-        android:layout_marginBottom="12dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/field"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/botton_left"
-        app:srcCompat="@drawable/cairight" />
-
     <TextView
         android:id="@+id/field"
-        android:layout_width="307dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="40dp"
-        android:text="TextView"
+        android:layout_width="308dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="     Definition"
+        android:textSize="18sp"
+        app:fontFamily="@font/aclonica"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.637"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/zi_image"
-        android:layout_width="198dp"
-        android:layout_height="132dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_right"
+        android:id="@+id/top_left"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toStartOf="@+id/top_center"
+        app:layout_constraintHorizontal_bias="0.214"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="?attr/colorBackgroundFloating"
-        tools:layout_editor_absoluteX="101dp" />
+        app:layout_constraintVertical_bias="0.757"
+        app:srcCompat="?attr/colorBackgroundFloating" />
+
+    <ImageView
+        android:id="@+id/top_center"
+        android:layout_width="231dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/colorBackgroundFloating" />
 
     <ImageView
         android:id="@+id/top_right"
-        android:layout_width="69dp"
-        android:layout_height="56dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_right"
+        android:layout_width="72dp"
+        android:layout_height="81dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/zi_image"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/top_center"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.801"
         app:srcCompat="?attr/colorBackgroundFloating" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="276dp"
+        android:layout_height="235dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toTopOf="@+id/field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_center"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/botton_left"
+            android:layout_width="123dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toTopOf="@+id/field"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_center"
+            app:layout_constraintVertical_bias="0.343"
+            app:srcCompat="@drawable/beizhileft" />
+
+        <ImageView
+            android:id="@+id/bottom_right"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toTopOf="@+id/field"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.467"
+            app:layout_constraintStart_toEndOf="@+id/botton_left"
+            app:srcCompat="@drawable/cairight" />
+
+    </LinearLayout>
+
+
 
 </android.support.constraint.ConstraintLayout>

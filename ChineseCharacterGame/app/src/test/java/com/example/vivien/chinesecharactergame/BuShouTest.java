@@ -11,7 +11,7 @@ public class BuShouTest {
 
     @Before
     public void before() {
-        this.buShou = new BuShou(1, R.drawable.dingziright, "Adult Male Over 18",new int[]{1,2,3,5});
+        this.buShou = new BuShou(1, R.drawable.dingziright, R.drawable.adultmale,"Adult Male Over 18",new int[]{1,2,3,5});
     }
 
     @Test
@@ -24,6 +24,10 @@ public class BuShouTest {
         assertEquals(R.drawable.dingziright, buShou.getImage());
     }
 
+    @Test
+    public void canAccessSymbol(){
+        assertEquals(R.drawable.adultmale, buShou.getSymbol());
+    }
 
     @Test
     public void canGetImageList(){
