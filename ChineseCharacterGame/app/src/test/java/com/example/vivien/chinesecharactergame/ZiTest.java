@@ -33,9 +33,9 @@ public class ZiTest {
         this.light = new Zi(3,"Pronounce : Deng || Definition :  Light ",
                 R.drawable.light);
         this.nail = new Zi(4,"Pronounce : Ding || Definition :  Nail ",
-                R.drawable.stick);
-        this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
-                R.drawable.stick);
+                R.drawable.nail);
+        this.timber = new Zi(5,"Pronounce : Cai || Definition :  Timber, Wooden Material ",
+                R.drawable.timber);
         this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
                 R.drawable.stick);
         this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
