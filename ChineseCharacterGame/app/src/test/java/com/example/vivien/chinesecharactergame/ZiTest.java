@@ -28,7 +28,7 @@ public class ZiTest {
     public void before() {
         this.shallowland = new Zi(1,"Pronounce : Ting || Definition :  a shallow land near a river",
                 R.drawable.shallowLand);
-        this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, ",
+        this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, hit against ",
                 R.drawable.shallowLand);
         this.game = new Game();
         this.waterSign = new PianPang(1, R.drawable.sandianshuileft, R.drawable.water, "WaterSign");
