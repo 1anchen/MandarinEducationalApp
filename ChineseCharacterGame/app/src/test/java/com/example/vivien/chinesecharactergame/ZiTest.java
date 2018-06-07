@@ -28,8 +28,18 @@ public class ZiTest {
     public void before() {
         this.shallowland = new Zi(1,"Pronounce : Ting || Definition :  a shallow land near a river",
                 R.drawable.shallowLand);
-        this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, hit against ",
-                R.drawable.shallowLand);
+        this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
+                R.drawable.stick);
+        this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
+                R.drawable.stick);
+        this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
+                R.drawable.stick);
+        this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
+                R.drawable.stick);
+        this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
+                R.drawable.stick);
+        this.shallowland = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
+                R.drawable.stick);
         this.game = new Game();
         this.waterSign = new PianPang(1, R.drawable.sandianshuileft, R.drawable.water, "WaterSign");
         this.woodSign = new PianPang( 2, R.drawable.muzhipiangleft, R.drawable.wood,"WoodSign");
