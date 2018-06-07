@@ -152,13 +152,11 @@ public class Game {
 
     public Zi findTheRightZi(){
         Zi newZi = new Zi(0,0,0,"",0);
-        for(int i=0; i<5; i++ ){
+        for(int i=0; i<zilist.length; i++ ){
 
-            for (int j=0; j<2; j++){
                 if(){
 
                 }
-            }
 
         }
 
