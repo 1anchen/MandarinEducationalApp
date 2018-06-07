@@ -2,16 +2,27 @@ package com.example.vivien.chinesecharactergame;
 
 public class Zi {
 
+    private int id;
     protected int pianPangId;
     protected int buShouId;
     protected int image;
     protected String definition;
+    protected int[] pianPandIdList;
+    protected int[] buShouIdList;
 
-    public Zi(int pianPangId, int buShouId, int image, String definition){
-        this.pianPangId = pianPangId;
-        this.buShouId = buShouId;
+    public Zi(int id, String definition, int image){
+        this.id = id;
+        this.pianPangId = 0;
+        this.buShouId = 0;
         this.image = image;
         this.definition = definition;
+        this.pianPandIdList = new int[]{1,2,3,4,5};
+        this.buShouIdList = new int[]{1,2};
+
+    }
+
+    public int getId() {
+        return id;
     }
 
     public int getPianPangId() {
@@ -29,4 +40,23 @@ public class Zi {
     public String getDefinition() {
         return definition;
     }
+
+    public void setPianPangId(int pianPangId) {
+        this.pianPangId = pianPangId;
+    }
+
+    public void setBuShouId(int buShouId) {
+        this.buShouId = buShouId;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
+    }
+
+    public void setDefinition(String definition) {
+        this.definition = definition;
+    }
+
+
+
 }
