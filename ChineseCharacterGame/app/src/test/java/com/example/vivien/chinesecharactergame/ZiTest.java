@@ -26,19 +26,19 @@ public class ZiTest {
 
     @Before
     public void before() {
-        this.shallowland = new Zi(1,"Pronounce : Ting || Definition :  a shallow land near a river ",
+        this.shallowland = new Zi(1,1,1,"Pronounce : Ting || Definition :  a shallow land near a river ",
                 R.drawable.shallowLand);
-        this.stick = new Zi(2,"Pronounce : Cheng || Definition :  Strike, Hit against ",
+        this.stick = new Zi(2,2,1,"Pronounce : Cheng || Definition :  Strike, Hit against ",
                 R.drawable.stick);
-        this.light = new Zi(3,"Pronounce : Deng || Definition :  Light ",
+        this.light = new Zi(3,3,1,"Pronounce : Deng || Definition :  Light ",
                 R.drawable.light);
-        this.nail = new Zi(4,"Pronounce : Ding || Definition :  Nail ",
+        this.nail = new Zi(4,5,1,"Pronounce : Ding || Definition :  Nail ",
                 R.drawable.nail);
-        this.timber = new Zi(5,"Pronounce : Cai || Definition :  Timber, Wooden Material ",
+        this.timber = new Zi(5,2,2,"Pronounce : Cai || Definition :  Timber, Wooden Material ",
                 R.drawable.timber);
-        this.wealth = new Zi(6,"Pronounce : Cai || Definition :  Wealth, Property, Valuables ",
+        this.wealth = new Zi(6,4,2,"Pronounce : Cai || Definition :  Wealth, Property, Valuables ",
                 R.drawable.wealth);
-        this.wrong = new Zi(7,"Sorry This Word Doesn't Exit, You Can Call It Whatever You Want ",
+        this.wrong = new Zi(7,0,0,"Sorry This Word Doesn't Exit, You Can Call It Whatever You Want ",
                 R.drawable.wrong);
         this.game = new Game();
         this.waterSign = new PianPang(1, R.drawable.sandianshuileft, R.drawable.water, "WaterSign");
@@ -53,46 +53,23 @@ public class ZiTest {
 
     @Test
     public void canGetPianPangId(){
-        assertEquals(0, zi.getPianPangId());
+        assertEquals(0, wrong.getPianPangId());
     }
 
     @Test
     public void canGetBuShouId(){
-        assertEquals(0, zi.getBuShouId());
+        assertEquals(0, wrong.getBuShouId());
     }
 
     @Test
     public void canGetImage(){
-        assertEquals(0, zi.getImage());
+        assertEquals(R.drawable.wrong, wrong.getImage());
     }
 
     @Test
     public void canGetDefinition(){
-        assertEquals("", zi.getDefinition());
+        assertEquals("Sorry This Word Doesn't Exit, You Can Call It Whatever You Want ", wrong.getDefinition());
     }
 
-    @Test
-    public void canSetPianPangId(){
-        zi.setPianPangId(waterSign.getid());
-        assertEquals(1, zi.getPianPangId());
-    }
-
-    @Test
-    public void canSetBuShouId(){
-        zi.setBuShouId(adultMaleSign.getid());
-        assertEquals(1, zi.getBuShouId());
-    }
-
-    @Test
-    public void canSetImage(){
-        zi.setImage(R.drawable.wrong);
-        assertEquals(R.drawable.wrong, zi.getImage());
-    }
-
-    @Test
-    public void canSetDefinition(){
-        zi.setDefinition("Wrong");
-        assertEquals("Wrong", zi.getDefinition());
-    }
 
 }
